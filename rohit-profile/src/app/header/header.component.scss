@@ -1,0 +1,41 @@
+.name-title, .menu > button, a > button{
+    color: white;
+}
+
+.name-title, .menu{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.name-title > a > span{
+    align-items: center;
+    font-size: 2.1em;
+    font-weight:600;
+    text-align: center;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+.header{
+    background: black;
+    // position: sticky;
+    z-index: 1;
+    padding-bottom: 5px;
+}
+
+.btn:hover{
+    color: #F7CA52 !important;
+    border-bottom: 2px solid #F7CA52;
+}
+.selected {
+    border-top: 2px solid #F7CA52;
+    border-bottom: 2px solid #F7CA52;
+}
