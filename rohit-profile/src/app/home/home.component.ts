@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import Typed from 'typed.js';
 
 @Component({
-  selector: 'app-profile-home',
-  templateUrl: './profile-home.component.html',
-  styleUrls: ['./profile-home.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class ProfileHomeComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   constructor() { }
 

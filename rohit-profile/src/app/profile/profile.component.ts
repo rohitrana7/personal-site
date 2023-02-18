@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { hLink } from '../constants';
 
 @Component({
   selector: 'app-profile',
@@ -8,12 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class ProfileComponent implements OnInit {
 
   constructor() { }
+  hLink = hLink;
 
-  gitHubLink = 'https://www.github.com/rohitrana7/';
-  linkedInLink = 'https://www.linkedin.com/in/rohitrana7/';
-  facebookLink = '#';
-  twitterLink = 'https://twitter.com/ranarohit7/';
-  instagramLink = 'https://www.instagram.com/thaekuaa/'
 
   ngOnInit(): void {
   }

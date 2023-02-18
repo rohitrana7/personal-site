@@ -5,5 +5,12 @@ export const navItem = {
     profile: 2,
     services: 3,
     skills: 4,
-    contact: 5,
+}
+
+export const hLink = {
+    gitHubLink : 'https://www.github.com/rohitrana7/',
+    linkedInLink : 'https://www.linkedin.com/in/rohitrana7/',
+    facebookLink : '#',
+    twitterLink : 'https://twitter.com/ranarohit7/',
+    instagramLink : 'https://www.instagram.com/thaekuaa/',
 }

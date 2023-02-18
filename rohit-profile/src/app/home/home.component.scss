@@ -24,7 +24,7 @@ section{
     height: 100%;
 }
 .typed-element{
-    font-size: 3.3rem;
+    font-size: 3rem;
     font-weight: 700;
     color: $theme-yellow;
 }
@@ -40,19 +40,4 @@ section{
 .placeholder-secondary{
     font-size: 1.2rem;
     color: white;
-}
-
-.separator {
-    border: none;
-    width: 200px;
-    height: 3px;
-    color: #F7CA52;
-    background: #F7CA52;
-    margin-left: auto;
-    margin-right: auto;
-}
-.btn-hire {
-    background: #ffdd81;
-    color: unset;
-    font-weight: bolder;
 }

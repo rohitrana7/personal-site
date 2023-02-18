@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "dist/rohit-profile",
+    "site": "rohitrana-co-in",
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -8,15 +8,13 @@
                 [ngClass]="{'selected': navValue == navItem.home}">Home</button>
             <button class="btn" routerLink="/profile" (click)="loadMenu(navItem.profile)"
                 [ngClass]="{'selected': navValue == navItem.profile}">Profile</button>
+            <button class="btn" routerLink="/services" (click)="loadMenu(navItem.services)"
+                [ngClass]="{'selected': navValue == navItem.services}">Services</button>
+            <button class="btn" routerLink="skills" (click)="loadMenu(navItem.skills)"
+                [ngClass]="{'selected': navValue == navItem.skills}">Skills</button>
             <a href="../../assets/pdf/Rohit Rana CV JFSD.pdf" target="_blank">
                 <button class="btn">Resume</button>
             </a>
-            <button class="btn" (click)="loadMenu(navItem.services)"
-                [ngClass]="{'selected': navValue == navItem.services}">Services</button>
-            <button class="btn" (click)="loadMenu(navItem.skills)"
-                [ngClass]="{'selected': navValue == navItem.skills}">Skills</button>
-            <button class="btn" (click)="loadMenu(navItem.contact)"
-                [ngClass]="{'selected': navValue == navItem.contact}">Contact</button>
         </div>
     </div>
 </div>

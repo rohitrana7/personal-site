@@ -1,5 +1,5 @@
-.name-title, .menu > button, a > button{
-    color: white;
+.btn{
+    color: white !important;
 }
 
 .name-title, .menu{
@@ -36,6 +36,5 @@ a:hover {
     border-bottom: 2px solid #F7CA52;
 }
 .selected {
-    border-top: 2px solid #F7CA52;
     border-bottom: 2px solid #F7CA52;
 }

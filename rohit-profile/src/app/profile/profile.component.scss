@@ -1,16 +1,18 @@
 p > li {
     text-align: justify !important;
+    font-size: 1.1rem;
 }
-.bg{
+.bg {
     background: black;
     height: 100vh;
     padding-top: 5%;
 }
-.social > a {
-    margin-right: 5%;
-}
 
-.bi {
-    font-size: 2rem;
-    color: white;
+.btn-resume {
+    background: #ffdd81;
+    color: unset;
+    font-weight: bolder;
+}
+h4{
+    color: #F7CA52;
 }
