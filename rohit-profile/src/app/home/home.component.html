@@ -1,4 +1,4 @@
-<div class="container-fluid main py-3">
+<div class="container-fluid main">
     <section>
         <div class="row main-content">
             <div class="col-md-6">
@@ -20,12 +20,16 @@
                     <a href="mailto:rohit.rana0207@gmail.com">
                         <button class="btn btn-hire mx-3">HIRE ME</button>
                     </a>
-                    <button class="btn btn-utility">MY WORKS</button>
+
+                    <a [href]="hLink.gitHubLink" target="_blank">
+                        <button class="btn btn-utility">MY WORKS</button>
+                    </a>
                 </div>
             </div>
             <div class="col-md-6">
                 <!-- <span class="theme-text">HELLO!</span> -->
                 <img src="../../assets/images/ppt-size-cropped.png" alt="" width="65%">
+                <p class="image-separator"> </p>
             </div>
         </div>
     </section>

@@ -20,13 +20,23 @@ html, body {
     margin-right: auto;
 }
 
+.image-separator {
+    border: none;
+    width: 75%;
+    height: 3px;
+    color: #F7CA52;
+    background: #F7CA52;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .btn-utility {
-    color: white;
+    color: white !important;
     border: 1px solid $theme-yellow;
 }
 .btn-utility:hover {
     background: #ffdd81;
-    color: unset;
+    color: black !important;
     font-weight: bolder;
 }
 .btn-hire {

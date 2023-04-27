@@ -12,5 +12,6 @@ export const hLink = {
     linkedInLink : 'https://www.linkedin.com/in/rohitrana7/',
     facebookLink : '#',
     twitterLink : 'https://twitter.com/ranarohit7/',
-    instagramLink : 'https://www.instagram.com/thaekuaa/',
+    instagramLink : 'https://www.instagram.com/im_ranarohit/',
+    hackerRankLink: 'https://www.hackerrank.com/rohitrana7/',
 }

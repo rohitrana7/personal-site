@@ -9,6 +9,10 @@ export class SkillsComponent implements OnInit {
 
   constructor() { }
 
+  concepts = [
+    {name: 'OOPS', value: 80, style: 'width: 80%'}
+  ]
+
   ngOnInit(): void {
   }
 

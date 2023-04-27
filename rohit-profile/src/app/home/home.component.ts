@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Typed from 'typed.js';
+import { hLink } from '../constants';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,8 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  hLink = hLink;
+
   ngOnInit(): void {
   const typed = new Typed('.typed-element', options);
   }
@@ -18,7 +21,7 @@ export class HomeComponent implements OnInit {
 
 const options = {
   strings: ['Tech Enthusiast', 'Full Stack Dev', 'Problem Solver', 'Rohit Rana'],
-  typeSpeed: 100,
+  typeSpeed: 75,
   backSpeed: 100,
   showCursor: true,
   cursorChar: '|',
