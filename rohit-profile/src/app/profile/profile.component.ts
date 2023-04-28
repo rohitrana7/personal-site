@@ -10,9 +10,12 @@ export class ProfileComponent implements OnInit {
 
   constructor() { }
   hLink = hLink;
-
+  age: number = 0;
 
   ngOnInit(): void {
+    //this.age = new Date() - new Date()
+    let timeDiff = Math.abs(Date.now() - new Date("1996-07-02").getTime());
+    this.age  = Math.floor((timeDiff / (1000 * 3600 * 24))/365.25);
   }
 
 }

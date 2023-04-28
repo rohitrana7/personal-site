@@ -21,8 +21,8 @@ export class HomeComponent implements OnInit {
 
 const options = {
   strings: ['Tech Enthusiast', 'Full Stack Dev', 'Problem Solver', 'Rohit Rana'],
-  typeSpeed: 75,
-  backSpeed: 100,
+  typeSpeed: 50,
+  backSpeed: 70,
   showCursor: true,
   cursorChar: '|',
   cursor: 200,
