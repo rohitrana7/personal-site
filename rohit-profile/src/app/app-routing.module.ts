@@ -5,17 +5,24 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ServicesComponent } from './services/services.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ShellComponent } from './shell/shell.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: '',
+    children: [
+      { path: '', component: HomeComponent, data: {route: 'home'} },
+      { path: 'profile', component: ProfileComponent, data: {route: 'profile'} },
+      { path: 'services', component: ServicesComponent },
+      { path: 'skills', component: SkillsComponent },
+    ],
+    component: ShellComponent
+  },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

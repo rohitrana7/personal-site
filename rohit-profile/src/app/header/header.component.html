@@ -1,7 +1,8 @@
 <div class="container-fluid header">
     <div class="row">
         <div class="col-md-4 name-title">
-            <a href="#"><span>{{profileTitle | uppercase}}</span></a>
+            <a href="#">
+                <span class="name-title-head">{{profileTitle | uppercase}}</span></a>
         </div>
         <div class="col-md-8 menu">
             <button class="btn" routerLink="/" (click)="loadMenu(navItem.home)"

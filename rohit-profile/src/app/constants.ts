@@ -1,4 +1,5 @@
 export const profileName = 'rohit';
+export const profileSurname = 'rana';
 
 export const navItem = {
     home: 1,

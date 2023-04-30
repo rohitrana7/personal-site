@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { hLink } from '../constants';
 
 @Component({
@@ -12,7 +12,8 @@ export class FooterComponent implements OnInit {
 
   hLink = hLink;
 
-  ngOnInit(): void {
-  }
+  @Input('copyrightContent') isCopyrightContent: boolean = true;
+
+  ngOnInit(): void { }
 
 }

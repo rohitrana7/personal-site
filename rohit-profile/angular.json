@@ -107,9 +107,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "rohit-profile"
+  "defaultProject": "rohit-profile",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

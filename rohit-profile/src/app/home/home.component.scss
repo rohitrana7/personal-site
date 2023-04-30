@@ -2,7 +2,6 @@ $theme-yellow: #F7CA52;
 
 .main{
     background-color: black;
-    height: 100vh;
 }
 
 .theme-text{
@@ -15,22 +14,23 @@ $theme-yellow: #F7CA52;
     text-align: center;
     height: 100vh;
 }
+
 .main-content > div {
     margin-top: auto;
     margin-bottom: auto;
 }
-section{
-    height: 100%;
-}
+
 .typed-element{
     font-size: 3rem;
     font-weight: 700;
     color: $theme-yellow;
 }
+
 .typed-cursor {
     font-size: 3rem;
     color: $theme-yellow;
 }
+
 @media only screen and (max-width: 600px) {
     .typed-element {
         font-size:2.2rem;
@@ -42,7 +42,13 @@ section{
     font-weight: 600;
     color: white;
 }
+
 .placeholder-secondary{
     font-size: 1.2rem;
     color: white;
+}
+
+.image-container{
+    width: 60%;
+    position: relative;
 }

@@ -1,40 +1,43 @@
-.btn{
-    color: white !important;
+.btn {
+  color: white !important;
 }
 
-.name-title, .menu{
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: center;
-}
-
-.name-title > a > span{
+.name-title,
+.menu {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  &-head {
     align-items: center;
     font-size: 2.1em;
-    font-weight:600;
+    font-weight: 600;
     text-align: center;
     color: white;
+  }
+  &-head:hover {
+    text-shadow: 2px 2px 5px #f7ca52;
+  }
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .btn:not(:last-child) {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
-.header{
-    background: black;
-    // position: sticky;
-    z-index: 1;
-    padding-bottom: 5px;
+.header {
+  background: black;
+  // position: sticky;
+  z-index: 1;
+  padding-bottom: 5px;
 }
 
-.btn:hover{
-    color: #F7CA52 !important;
-    border-bottom: 2px solid #F7CA52;
+.btn:hover {
+  color: #f7ca52 !important;
+  border-bottom: 2px solid #f7ca52;
 }
 .selected {
-    border-bottom: 2px solid #F7CA52;
+  border-bottom: 2px solid #f7ca52;
 }

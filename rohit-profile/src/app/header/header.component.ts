@@ -4,7 +4,7 @@ import { navItem, profileName } from '../constants'
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
 
@@ -12,13 +12,11 @@ export class HeaderComponent implements OnInit {
 
   profileTitle: string = profileName;
   navItem = navItem;
-  navValue = navItem.home;  //by default pointing to home
+  navValue = navItem.home; //by default pointing to home
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   loadMenu(navItem: number) {
     this.navValue = navItem;
   }
-
 }
