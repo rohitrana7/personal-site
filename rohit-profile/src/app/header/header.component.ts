@@ -6,15 +6,13 @@ import { navItem, profileName } from '../constants'
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   constructor() { }
 
   profileTitle: string = profileName;
   navItem = navItem;
   navValue = navItem.home; //by default pointing to home
-
-  ngOnInit(): void {}
 
   loadMenu(navItem: number) {
     this.navValue = navItem;

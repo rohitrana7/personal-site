@@ -6,14 +6,12 @@ import { hLink } from '../constants';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
 
   constructor() { }
 
   hLink = hLink;
 
-  @Input('copyrightContent') isCopyrightContent: boolean = true;
-
-  ngOnInit(): void { }
+  @Input() isCopyrightContent: boolean = true;
 
 }

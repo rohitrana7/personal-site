@@ -6,13 +6,13 @@
         </div>
         <div class="col-md-8 menu">
             <button class="btn" routerLink="/" (click)="loadMenu(navItem.home)"
-                [ngClass]="{'selected': navValue == navItem.home}">Home</button>
+                [ngClass]="{'selected': navValue === navItem.home}">Home</button>
             <button class="btn" routerLink="/profile" (click)="loadMenu(navItem.profile)"
-                [ngClass]="{'selected': navValue == navItem.profile}">Profile</button>
+                [ngClass]="{'selected': navValue === navItem.profile}">Profile</button>
             <button class="btn" routerLink="/services" (click)="loadMenu(navItem.services)"
-                [ngClass]="{'selected': navValue == navItem.services}">Services</button>
+                [ngClass]="{'selected': navValue === navItem.services}">Services</button>
             <button class="btn" routerLink="skills" (click)="loadMenu(navItem.skills)"
-                [ngClass]="{'selected': navValue == navItem.skills}">Skills</button>
+                [ngClass]="{'selected': navValue === navItem.skills}">Skills</button>
             <a href="../../assets/pdf/Rohit Rana M_CV JFSD.pdf" target="_blank">
                 <button class="btn">Resume</button>
             </a>

@@ -7,7 +7,7 @@ import { filter } from 'rxjs/operators';
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.scss']
 })
-export class ShellComponent implements OnInit {
+export class ShellComponent {
 
   currentUrl:string = '';
 
@@ -18,9 +18,6 @@ export class ShellComponent implements OnInit {
     ).subscribe((event:any) => {
       this.currentUrl = event.url;
     })
-  }
-
-  ngOnInit(): void {
   }
 
 }
