@@ -26,14 +26,34 @@ $theme-yellow: #F7CA52;
     color: $theme-yellow;
 }
 
-.typed-cursor {
-    font-size: 3rem;
+.typed-cursor{
+    font-size: 3.2rem;
     color: $theme-yellow;
+    opacity: 1;
+    animation: blink .7s infinite;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .typed-element {
         font-size:2.2rem;
+    }
+    .typed-cursor {
+        font-size:2.4rem;
     }
   }
 

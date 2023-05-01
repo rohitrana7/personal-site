@@ -1,13 +1,6 @@
 export const profileName = 'rohit';
 export const profileSurname = 'rana';
 
-export const navItem = {
-    home: 1,
-    profile: 2,
-    services: 3,
-    skills: 4,
-}
-
 export const hLink = {
     gitHubLink : 'https://www.github.com/rohitrana7/',
     linkedInLink : 'https://www.linkedin.com/in/rohitrana7/',

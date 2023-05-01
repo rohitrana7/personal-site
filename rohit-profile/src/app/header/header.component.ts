@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { navItem, profileName } from '../constants'
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { profileName } from '../constants'
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnChanges {
 
   constructor() { }
 
   profileTitle: string = profileName;
-  navItem = navItem;
-  navValue = navItem.home; //by default pointing to home
 
-  loadMenu(navItem: number) {
-    this.navValue = navItem;
+  @Input() currentUrl: string = '';
+
+  ngOnChanges(changes: SimpleChanges): void {
+    let url:string = changes['currentUrl'].currentValue;
+    this.currentUrl = url.substring(1);
   }
 }

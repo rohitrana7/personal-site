@@ -1,0 +1,9 @@
+//if firebase already initialized
+0. firebase init    //if firebase not initialized
+1. firebase login
+2. ng build
+3. firebase deploy  
+
+3. firebase deploy -m "Deploying the best new feature ever."
+//You can optionally add a comment to each of your deployments. 
+This comment will display with the other deployment information on your project's Firebase Hosting page. 
