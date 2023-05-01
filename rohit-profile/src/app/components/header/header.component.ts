@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { profileName } from '../constants'
+import { profileName } from '../../constants'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { profileName } from '../constants'
 })
 export class HeaderComponent implements OnChanges {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   profileTitle: string = profileName;
 
