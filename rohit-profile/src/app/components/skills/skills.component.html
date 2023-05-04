@@ -7,313 +7,157 @@
             </div>
         </div>
     </div>
-    
+
     <div class="row dark text-white">
         <div class="col-md-6 my-2 b-2-white">
-                <h4 class="text-center">Concepts</h4>
-                <div class="row skills-50 my-2">
-                <div class="col-md-3">OOPS</div>
+            <h4 class="text-center">Concepts</h4>
+            <div class="row skills-50 my-2" *ngFor="let skill of skills.concepts">
+                <div class="col-md-3"> {{skill.name}} </div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>  
                 </div>
             </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Data Structure</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Algorithms</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">DBMS</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Design Patterns</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">OOAD</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Microservices</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Agile Development</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-    
+
             <h4 class="text-center">Server Side</h4>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Spring-Boot</div>
+            <div class="row skills-50 my-2" *ngFor="let skill of skills.serverSide">
+                <div class="col-md-3"> {{skill.name}} </div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
                 </div>
             </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Hibernate/JPA</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Apache kafka</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-    
+
             <h4 class="text-center">Build Tools</h4>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Maven</div>
+            <div class="row skills-50 my-2" *ngFor="let skill of skills.buildTools">
+                <div class="col-md-3"> {{skill.name}} </div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
                 </div>
             </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Gradle</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-    
+
             <h4 class="text-center">Unit testing</h4>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">JUnit/Mockito</div>
+            <div class="row skills-50 my-2" *ngFor="let skill of skills.unitTesting">
+                <div class="col-md-3"> {{skill.name}} </div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
                 </div>
             </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Karma/Jasmine</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-    
+
             <h4 class="text-center">Cloud</h4>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">AWS</div>
+            <div class="row skills-50 my-2" *ngFor="let skill of skills.cloud">
+                <div class="col-md-3"> {{skill.name}} </div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Heroku</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
                 </div>
             </div>
             <!--Add Skills above this line-->
         </div>
-    
+
         <!--box2-->
         <div class="col-md-6 my-2">
             <h4 class="text-center">Programming Languages</h4>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Java</div>
+            <div class="row skills-50 my-2" *ngFor="let skill of skills.programmingLanguages">
+                <div class="col-md-3"> {{skill.name}} </div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
                 </div>
             </div>
-    
+
             <h4 class="text-center">Web</h4>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">HTML5</div>
+            <div class="row skills-50 my-2" *ngFor="let skill of skills.web">
+                <div class="col-md-3"> {{skill.name}} </div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
                 </div>
             </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">CSS3</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Javascript</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Typescript</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Agular 9/11/13</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
+
             <h4 class="text-center">Database Management Systems</h4>
             <h5 class="text-center">RDBMS</h5>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">MySQL</div>
+            <div class="row skills-50 my-2" *ngFor="let skill of skills.rdbms">
+                <div class="col-md-3">{{skill.name}}</div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
                 </div>
             </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">SQL/ PLSQL</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
+            
             <h5 class="text-center">NoSQL</h5>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">MongoDB</div>
+            <div class="row skills-50 my-2" *ngFor="let skill of skills.nosql">
+                <div class="col-md-3">{{skill.name}}</div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
                 </div>
             </div>
             <h5 class="text-center">Search Engines</h5>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Elasticsearch</div>
+            <div class="row skills-50 my-2" *ngFor="let skill of skills.searchEngines">
+                <div class="col-md-3">{{skill.name}}</div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
                 </div>
             </div>
-    
+
             <h4 class="text-center">Version Control System</h4>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Git/GitHub</div>
+            <div class="row skills-50 my-2" *ngFor="let skill of skills.versionControlSystem">
+                <div class="col-md-3">{{skill.name}}</div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
                 </div>
             </div>
-    
+
             <h4 class="text-center">IDE</h4>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Eclipse/STS</div>
+            <div class="row skills-50 my-2" *ngFor ="let skill of skills.ide">
+                <div class="col-md-3">{{skill.name}}</div>
                 <div class="col-md-3">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                            [style.width]="skill.percentValue" [attr.aria-valuenow]="skill.value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
                 </div>
             </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">Visual Studio Code</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row skills-50 my-2">
-                <div class="col-md-3">IntelliJ</div>
-                <div class="col-md-3">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
+           
             <!--Add skills above this line-->
         </div>
     </div>
