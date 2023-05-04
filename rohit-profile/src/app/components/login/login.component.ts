@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,14 +10,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent {
 
   loginForm!: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router : Router) {
     this.initForm();
   }
 
   login() {
     if(this.loginForm.valid){
       console.log(this.loginForm);
+      this.router.navigate(['auth/profile-login']);
     }
+
   }
 
   initForm() {
