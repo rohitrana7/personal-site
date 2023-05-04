@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { hLink } from '../../constants';
+import { hLink } from '../../constants/constants';
 
 @Component({
   selector: 'app-footer',

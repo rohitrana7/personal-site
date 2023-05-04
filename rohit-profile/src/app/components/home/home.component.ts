@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Typed from 'typed.js';
-import { hLink } from '../../constants';
+import { hLink } from '../../constants/constants';
 
 @Component({
   selector: 'app-home',
