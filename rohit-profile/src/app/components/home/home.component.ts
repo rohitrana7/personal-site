@@ -23,7 +23,6 @@ const options = {
   strings: ['Tech Enthusiast', 'Full Stack Dev', 'Problem Solver', 'Rohit Rana'],
   typeSpeed: 50,
   backSpeed: 70,
-  showCursor: true,
-  cursorChar: '|',
+  showCursor: false,
   cursor: 200,
 };
