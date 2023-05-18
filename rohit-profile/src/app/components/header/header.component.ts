@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { profileName } from '../../constants'
+import { profileName } from '../../constants/constants'
 import { Router } from '@angular/router';
 
 @Component({

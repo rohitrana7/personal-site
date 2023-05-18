@@ -4,7 +4,7 @@ import { HomeComponent } from 'src/app/components/home/home.component';
 import { ProfileComponent } from 'src/app/components/profile/profile.component';
 import { ShellComponent } from 'src/app/components/shell/shell.component';
 import { SkillsComponent } from 'src/app/components/skills/skills.component';
-import { ServicesComponent } from 'src/app/services/services.component';
+import { ServicesComponent } from 'src/app/components/services/services.component';
 
 const routes: Routes = [
   {

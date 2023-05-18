@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,14 +11,21 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   loginForm!: FormGroup;
-  constructor(private fb: FormBuilder, private router : Router) {
+  constructor(private fb: FormBuilder, private router : Router,
+    private auth: AuthService) {
     this.initForm();
   }
 
   login() {
-    if(this.loginForm.valid){
-      console.log(this.loginForm);
-      this.router.navigate(['auth/profile-login']);
+    if(this.loginForm.valid) {
+      this.auth.loginUser(this.loginForm.getRawValue()).subscribe( data => {
+        if (data.success && data.statusCode === 200) {
+          localStorage.setItem('access-token', data.token);
+          this.router.navigate(['auth/profile-login']);
+        } else {
+          alert('Invalid Credentials');
+        }
+      })
     }
 
   }
