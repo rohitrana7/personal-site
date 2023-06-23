@@ -7,7 +7,7 @@ const routes: Routes = [
     path: '', loadChildren: () => import('./_modules/face/face.module').then(m => m.FaceModule)
   },
   {
-    path: 'auth', loadChildren: () => import('./_modules/operation/operation.module').then(m => m.OperationModule) 
+    path: 'auth', loadChildren: () => import('./_modules/operation/operation.module').then(m => m.OperationModule) //load dynamic portfolio mgmt module
   },
   { path: '**', component: PageNotFoundComponent },
 ];
