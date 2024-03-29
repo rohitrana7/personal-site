@@ -6,7 +6,7 @@ export const hLink = {
     linkedInLink : 'https://www.linkedin.com/in/rohitrana7/',
     facebookLink : '#',
     twitterLink : 'https://twitter.com/ranarohit7/',
-    instagramLink : 'https://www.instagram.com/im_ranarohit/',
+    instagramLink : 'https://www.instagram.com/rohitranaog/',
     hackerRankLink: 'https://www.hackerrank.com/rohitrana7/',
     stackOverflowLink: 'https://stackoverflow.com/users/10141967/enthucoder',
 }
