@@ -63,14 +63,14 @@ table {
       padding-left: 10px !important;
     }
 
-  .mat-column-id, .mat-column-intensity, .mat-column-category {
+  .mat-column-id, .mat-column-frequency, .mat-column-category {
     word-wrap: break-word !important;
     white-space: unset !important;
     flex: 0 0 5% !important;
     width: 5% !important;
   }
 
-  td.mat-column-intensity {
+  td.mat-column-frequency {
     text-align: center !important;
   }
 

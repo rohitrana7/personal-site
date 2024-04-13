@@ -1,10 +1,8 @@
 import {
   Component,
   ElementRef,
-  Renderer2,
   ViewChild,
 } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-skills',
@@ -13,7 +11,6 @@ import { Router } from '@angular/router';
 })
 export class SkillsComponent {
   @ViewChild('skillWidth') skillWidth!: ElementRef;
-  constructor(private router: Router) { }
 
   skills = {
     concepts: [
@@ -73,15 +70,5 @@ export class SkillsComponent {
     ],
   };
 
-  ngAfterViewInit(): void {
-    //code for handling swipe gesture
-    const hammertime = new Hammer(document.documentElement);
-    hammertime.on('swipeleft', (event) => {
-      event.preventDefault(); // Prevent default behavior of touch events
-      this.router.navigateByUrl('/services');
-    });
-    hammertime.on('swiperight', () => {
-      this.router.navigateByUrl('/profile');
-    });
-  }
+  constructor() { }
 }

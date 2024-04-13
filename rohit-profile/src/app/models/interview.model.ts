@@ -1,7 +1,7 @@
 export interface InterviewModel {
     id: number;
     question: string;
-    intensity: number;
+    frequency: number;
     difficulty: number;
     category: string;
 }
