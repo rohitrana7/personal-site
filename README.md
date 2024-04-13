@@ -1,4 +1,4 @@
-# DynamicPortfolio
+# Dynamic Portfolio website
 Portfolio website with added features of adding/ updating skills and experience
 
 ## Details
