@@ -1,5 +1,5 @@
 //if firebase already initialized
-0. firebase init    //if firebase not initialized
+0. firebase init    //if firebase not initialized. But this project has been initialized during 1st time deployment
 1. firebase login
 2. ng build
 3. firebase deploy  

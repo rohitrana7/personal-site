@@ -5,19 +5,19 @@
                 <span class="name-title-head">{{profileTitle | uppercase}}</span></a>
         </div>
         <div class="col-md-8 menu">
-            <button class="btn" routerLink="/"
-                [ngClass]="{'selected': currentUrl === ''}">Home</button>
+            <button class="btn" routerLink="/" [ngClass]="{'selected': currentUrl === ''}">Home</button>
             <button class="btn" routerLink="/profile"
                 [ngClass]="{'selected': currentUrl === 'profile'}">Profile</button>
+            <button class="btn" routerLink="skills" 
+                [ngClass]="{'selected': currentUrl === 'skills'}">Skills</button>
             <button class="btn" routerLink="/services"
                 [ngClass]="{'selected': currentUrl === 'services'}">Services</button>
-            <button class="btn" routerLink="skills"
-                [ngClass]="{'selected': currentUrl === 'skills'}">Skills</button>
+            <button class="btn" routerLink="interview"
+                [ngClass]="{'selected': currentUrl === 'interview'}">Interviews</button>
             <a href="../../assets/pdf/Rohit Rana JFSD PR_CV24.pdf" target="_blank">
                 <button class="btn">Resume</button>
             </a>
-            <button class="btn" routerLink="interview"
-                [ngClass]="{'selected': currentUrl === 'interview'}">Interviews</button>
+
             <button class="btn" routerLink="auth">
                 <i class="bi bi-person-fill-check" style="font-size: 1.4rem;"></i>
             </button>

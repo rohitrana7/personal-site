@@ -4,6 +4,7 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-skills',
@@ -12,7 +13,7 @@ import {
 })
 export class SkillsComponent {
   @ViewChild('skillWidth') skillWidth!: ElementRef;
-  constructor() { }
+  constructor(private router: Router) { }
 
   skills = {
     concepts: [
@@ -55,7 +56,7 @@ export class SkillsComponent {
       { name: 'MySQL', percentValue: '75%', value: 75 },
       { name: 'SQL/ PLSQL', percentValue: '60%', value: 60 },
     ],
-    nosql: [{ name: 'MangoDB', percentValue: '50%', value: 50 }],
+    nosql: [{ name: 'MongoDB', percentValue: '50%', value: 50 }],
     // searchEngines: [{ name: 'Elasticsearch', percentValue: '50%', value: 50 }],
     containers: [
       { name: 'Docker', percentValue: '70%', value: 70 },
@@ -71,4 +72,16 @@ export class SkillsComponent {
       { name: 'IntelliJ', percentValue: '80%', value: 80 },
     ],
   };
+
+  ngAfterViewInit(): void {
+    //code for handling swipe gesture
+    const hammertime = new Hammer(document.documentElement);
+    hammertime.on('swipeleft', (event) => {
+      event.preventDefault(); // Prevent default behavior of touch events
+      this.router.navigateByUrl('/services');
+    });
+    hammertime.on('swiperight', () => {
+      this.router.navigateByUrl('/profile');
+    });
+  }
 }

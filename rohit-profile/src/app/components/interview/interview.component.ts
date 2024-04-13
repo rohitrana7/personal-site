@@ -3,6 +3,7 @@ import { Component, AfterViewInit, ViewChild } from "@angular/core";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatSort } from "@angular/material/sort";
 import { MatTableDataSource } from "@angular/material/table";
+import { Router } from "@angular/router";
 import { InterviewModel } from "src/app/models/interview.model";
 
 /**
@@ -25,9 +26,9 @@ export class InterviewComponent implements AfterViewInit {
   totalExp: number;
   currentDate: string;
 
-  constructor() {
+  constructor(private router: Router) {
     const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    this.totalExp = new Date().getFullYear() - 2018.5;
+    this.totalExp = new Date().getFullYear() - 2019;
     this.currentDate = month[new Date().getMonth()] + ' ' + new Date().getFullYear();
   }
 
@@ -35,6 +36,16 @@ export class InterviewComponent implements AfterViewInit {
     this.dataSource = new MatTableDataSource(INTERVIEW_DATA);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+
+    //code for handling swipe gesture
+    const hammertime = new Hammer(document.documentElement);
+    // hammertime.on('swipeleft', () => {
+    //   this.router.navigateByUrl('/profile');
+    // });
+    hammertime.on('swiperight', (event) => {
+      event.preventDefault(); // Prevent default behavior of touch events
+      this.router.navigateByUrl('/services');
+    });
   }
 
   applyFilter(event: Event) {
