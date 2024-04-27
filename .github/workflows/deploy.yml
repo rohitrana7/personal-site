@@ -10,16 +10,21 @@ jobs:
     name: Build Angular App
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3/rohit-profile
     - uses: actions/setup-node@v3
       with:
         node-version: '18'
 
     - name: Install packages and dependencies
-      run: npm install -g @angular/cli && npm install
+      working-directory: rohit-profile
+      run: |
+        node -v
+        npm install -g @angular/cli@13.1
+        npm ci
+
 
     - name: Run build
-      run: ng build
+      run: ng build --prod
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
