@@ -1,0 +1,53 @@
+name: Deploying Angular App to S3 and CloudFront
+
+on:
+  push:
+    branches: 
+      - 'main'
+
+jobs:
+  build:
+    name: Build Angular App
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install packages and dependencies
+      run: npm install -g @angular/cli && npm install
+
+    - name: Run build
+      run: ng build
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: artifacts
+        path: dist/github-angular-demo/
+
+  deploy:
+    name: Development to S3 and CloudFront
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - uses: actions/download-artifact@v3
+      with:
+        name: artifacts
+        path: dist/github-angular-demo/
+
+    - uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+
+    - name: S3 Sync
+      run: aws s3 sync dist/github-angular-demo/ s3://${{ secrets.S3_BUCKET }}
+
+    - name: Cloudfront Invalidation
+      run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
