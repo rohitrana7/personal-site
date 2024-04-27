@@ -24,13 +24,14 @@ jobs:
 
 
     - name: Run build
+      working-directory: rohit-profile
       run: ng build --prod
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
         name: artifacts
-        path: dist/github-angular-demo/
+        path: rohit-profile/dist/rohit-profile/
 
   deploy:
     name: Development to S3 and CloudFront
