@@ -53,7 +53,8 @@ jobs:
         aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
     - name: S3 Sync
-      run: aws s3 sync rohit-profile/dist/rohit-profile/ s3://${{ secrets.S3_BUCKET }}
+      working-directory: rohit-profile
+      run: aws s3 sync dist/rohit-profile/ s3://${{ secrets.S3_BUCKET }}
 
     - name: Cloudfront Invalidation
       run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
