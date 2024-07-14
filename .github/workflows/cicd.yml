@@ -1,4 +1,4 @@
-name: Dev to S3 and CloudFront
+name: Deploy to S3 and CloudFront
 
 on:
   workflow_dispatch:
