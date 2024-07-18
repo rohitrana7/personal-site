@@ -13,20 +13,18 @@ import { AuthService } from 'src/app/auth/auth.service';
 
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    RegisterComponent,
-    OperationShellComponent,
-    ProfileLoginComponent
-  ],
-  imports: [
-    CommonModule,
-    OperationRoutingModule,
-    SharedModule,
-  ],
-  providers: [
-    AuthService,
-    { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true }
-  ]
+    imports: [
+        CommonModule,
+        OperationRoutingModule,
+        SharedModule,
+        LoginComponent,
+        RegisterComponent,
+        OperationShellComponent,
+        ProfileLoginComponent,
+    ],
+    providers: [
+        AuthService,
+        { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true }
+    ]
 })
 export class OperationModule { }

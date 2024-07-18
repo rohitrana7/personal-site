@@ -8,8 +8,8 @@ describe('OperationShellComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OperationShellComponent ]
-    })
+    imports: [OperationShellComponent]
+})
     .compileComponents();
   });
 
