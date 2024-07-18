@@ -11,6 +11,7 @@ export class ProfileComponent implements OnInit {
   constructor() { }
   hLink = hLink;
   age: number = 0;
+  userEmail:string = "rohit.rana0207@gmail.com";
 
   ngOnInit(): void {
     this.calculateDynamicAge();
