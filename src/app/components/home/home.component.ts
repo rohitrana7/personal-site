@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import Typed from 'typed.js';
 import { hLink } from '../../constants/constants';
+import { SharedModule } from '../../_modules/shared/shared.module';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
+  standalone: true,
+  imports: [SharedModule, FooterComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

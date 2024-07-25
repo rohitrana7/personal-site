@@ -3,13 +3,16 @@ import { Component, AfterViewInit, ViewChild } from "@angular/core";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatSort } from "@angular/material/sort";
 import { MatTableDataSource } from "@angular/material/table";
-import { InterviewModel } from "src/app/models/interview.model";
+import { InterviewModel } from "../../models/interview.model";
+import { SharedModule } from "../../_modules/shared/shared.module";
 
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
 @Component({
   selector: 'app-interview',
+  standalone: true,
+  imports: [SharedModule],
   styleUrls: ['./interview.component.scss'],
   templateUrl: './interview.component.html',
 })

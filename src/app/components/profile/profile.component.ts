@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { hLink } from '../../constants/constants';
+import { SharedModule } from '../../_modules/shared/shared.module';
 
 @Component({
   selector: 'app-profile',
+  standalone: true,
+  imports: [SharedModule],
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })

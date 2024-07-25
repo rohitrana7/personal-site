@@ -3,9 +3,12 @@ import {
   ElementRef,
   ViewChild,
 } from '@angular/core';
+import { SharedModule } from '../../_modules/shared/shared.module';
 
 @Component({
   selector: 'app-skills',
+  standalone: true,
+  imports: [SharedModule],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
 })

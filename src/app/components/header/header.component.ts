@@ -1,15 +1,15 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { profileName } from '../../constants/constants'
-import { Router } from '@angular/router';
+import { SharedModule } from '../../_modules/shared/shared.module';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
+  imports: [SharedModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnChanges {
-
-  constructor(private router: Router) { }
 
   profileTitle: string = profileName;
 
