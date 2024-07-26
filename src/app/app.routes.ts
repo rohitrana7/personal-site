@@ -15,7 +15,6 @@ export const routes: Routes = [
       { path: 'profile', component: ProfileComponent, data: {route: 'profile'} },
       { path: 'services', component: ServicesComponent },
       { path: 'skills', component: SkillsComponent },
-      { path: 'interview', component: InterviewComponent },
       { path: '**', component: PageNotFoundComponent },
     ],
   component: ShellComponent
