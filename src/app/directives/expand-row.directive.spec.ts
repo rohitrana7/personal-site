@@ -1,8 +1,11 @@
+import { ElementRef, Renderer2 } from '@angular/core';
 import { ExpandRowDirective } from './expand-row.directive';
 
 describe('DoubleClickDirective', () => {
   it('should create an instance', () => {
-    const directive = new ExpandRowDirective();
+    let elementRef!: ElementRef;
+    let renderer!: Renderer2;
+    const directive = new ExpandRowDirective(elementRef, renderer);
     expect(directive).toBeTruthy();
   });
 });
