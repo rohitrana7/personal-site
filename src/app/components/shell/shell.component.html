@@ -1,0 +1,3 @@
+<app-header [currentUrl] = "currentUrl" class="sticky"></app-header>
+<router-outlet></router-outlet>
+<app-footer *ngIf="currentUrl !== '/'"></app-footer>
