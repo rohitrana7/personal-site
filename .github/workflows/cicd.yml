@@ -20,7 +20,7 @@ jobs:
       run: npm i
 
     - name: Linting
-      run: npm run lint
+      run: npm ci && npm run lint
 
     - name: Code coverage
       run: npm run test:ci
