@@ -10,6 +10,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:ci": "ng test --no-watch --code-coverage --source-map=false",
+    "lint": "ng lint",
     "sonar": "sonar-scanner",
     "serve:ssr:rohit-profile": "node dist/rohit-profile/server/server.mjs"
   },
