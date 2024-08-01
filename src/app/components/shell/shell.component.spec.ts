@@ -1,25 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
 import { ShellComponent } from './shell.component';
+import { RouterModule } from '@angular/router';
 
 describe('ShellComponent', () => {
-  let component: ShellComponent;
-  let fixture: ComponentFixture<ShellComponent>;
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShellComponent ]
-    })
-    .compileComponents();
+      imports: [ShellComponent, RouterModule.forRoot(
+        [{path: '', component: ShellComponent}, {path: 'simple', component: ShellComponent}]
+      )],
+    }).compileComponents();
   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ShellComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(ShellComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
   });
 });

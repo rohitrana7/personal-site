@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
-import { InterviewComponent } from './components/interview/interview.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ServicesComponent } from './components/services/services.component';
 import { SkillsComponent } from './components/skills/skills.component';

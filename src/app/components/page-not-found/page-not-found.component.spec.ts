@@ -1,25 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
 import { PageNotFoundComponent } from './page-not-found.component';
+import { RouterModule } from '@angular/router';
 
 describe('PageNotFoundComponent', () => {
-  let component: PageNotFoundComponent;
-  let fixture: ComponentFixture<PageNotFoundComponent>;
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [PageNotFoundComponent]
-})
-    .compileComponents();
+      imports: [PageNotFoundComponent, RouterModule.forRoot(
+        [{path: '', component: PageNotFoundComponent}, {path: 'simple', component: PageNotFoundComponent}]
+      )],
+    }).compileComponents();
   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PageNotFoundComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(PageNotFoundComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
   });
 });
