@@ -11,19 +11,16 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [SharedModule, HeaderComponent, FooterComponent, RouterOutlet],
   templateUrl: './shell.component.html',
-  styleUrls: ['./shell.component.scss']
+  styleUrls: ['./shell.component.scss'],
 })
 export class ShellComponent {
-
-  currentUrl:string = '';
+  currentUrl: string = '';
 
   constructor(private router: Router) {
-    
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe((event:any) => {
-      this.currentUrl = event.url;
-    })
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        this.currentUrl = event.url;
+      });
   }
-
 }

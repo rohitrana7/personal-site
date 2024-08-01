@@ -9,17 +9,15 @@ import { FooterComponent } from '../footer/footer.component';
   standalone: true,
   imports: [SharedModule, FooterComponent],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
   hLink = hLink;
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-  const typed = new Typed('.typed-element', options);
+    const typed = new Typed('.typed-element', options);
   }
-
 }
 
 const options = {
