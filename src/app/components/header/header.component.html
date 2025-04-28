@@ -1,20 +1,28 @@
 <div class="container-fluid header">
-    <div class="row">
-        <div class="col-md-4 name-title">
-            <a href="#">
-                <span class="name-title-head">{{profileTitle | uppercase}}</span></a>
-        </div>
-        <div class="col-md-8 menu">
-            <button class="btn" routerLink="/" [ngClass]="{'selected': currentUrl === ''}">Home</button>
-            <button class="btn" routerLink="/profile"
-                [ngClass]="{'selected': currentUrl === 'profile'}">Profile</button>
-            <button class="btn" routerLink="skills" 
-                [ngClass]="{'selected': currentUrl === 'skills'}">Skills</button>
-            <button class="btn" routerLink="/services"
-                [ngClass]="{'selected': currentUrl === 'services'}">Services</button>
-            <a href="../../assets/pdf/Rohit Rana JFSD PR_CV24.pdf" target="_blank">
-                <button class="btn">Resume</button>
-            </a>
-        </div>
+  <div class="row">
+    <div class="col-md-4 name-title">
+      <a href="#">
+        <span class="name-title-head">{{ profileTitle | uppercase }}</span></a
+      >
     </div>
+    <div class="col-md-8 menu">
+      <button class="btn" routerLink="/" [ngClass]="{ selected: currentUrl === '' }">Home</button>
+      <button class="btn" routerLink="/profile" [ngClass]="{ selected: currentUrl === 'profile' }">
+        Profile
+      </button>
+      <button class="btn" routerLink="skills" [ngClass]="{ selected: currentUrl === 'skills' }">
+        Skills
+      </button>
+      <button
+        class="btn"
+        routerLink="/services"
+        [ngClass]="{ selected: currentUrl === 'services' }"
+      >
+        Services
+      </button>
+      <a [href]="resumeUrlName" target="_blank">
+        <button class="btn">CV <i class="bi bi-cloud-download"></i></button>
+      </a>
+    </div>
+  </div>
 </div>

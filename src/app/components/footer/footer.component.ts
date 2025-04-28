@@ -7,12 +7,10 @@ import { SharedModule } from '../../_modules/shared/shared.module';
   standalone: true,
   imports: [SharedModule],
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-
   hLink = hLink;
 
   @Input() isCopyrightContent: boolean = true;
-
 }

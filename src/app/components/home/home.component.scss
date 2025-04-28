@@ -1,74 +1,85 @@
-$theme-yellow: #F7CA52;
+$theme-yellow: #f7ca52;
 
-.main{
-    background-color: black;
+.main {
+  background-image: url('/assets/bokeh.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.theme-text{
-    color: $theme-yellow;
-    font-weight:600;
-    //margin-left: -40px;
+.theme-text {
+  color: $theme-yellow;
+  font-weight: 600;
+  //margin-left: -40px;
 }
 
 .main-content {
-    text-align: center;
-    height: 100vh;
+  text-align: center;
+  height: 100vh;
 }
 
 .main-content > div {
-    margin-top: auto;
-    margin-bottom: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.typed-element{
-    font-size: 3rem;
-    font-weight: 700;
-    color: $theme-yellow;
+.typed-element {
+  font-size: 3rem;
+  font-weight: 700;
+  color: $theme-yellow;
 }
 
-.typed-cursor{
-    font-size: 3.2rem;
-    color: $theme-yellow;
-    opacity: 1;
-    animation: blink .7s infinite;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+.typed-cursor {
+  font-size: 3.2rem;
+  color: $theme-yellow;
+  opacity: 1;
+  animation: blink 0.7s infinite;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .typed-element {
-        font-size:2.2rem;
-    }
-    .typed-cursor {
-        font-size:2.4rem;
-    }
+  .typed-element {
+    font-size: 2.2rem;
   }
 
+  .typed-cursor {
+    font-size: 2.4rem;
+  }
+}
+
 .placeholder {
-    font-size: 2rem;
-    font-weight: 600;
-    color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
 }
 
-.placeholder-secondary{
-    font-size: 1.2rem;
-    color: white;
+.placeholder-secondary {
+  font-size: 1.2rem;
+  color: white;
 }
 
-.image-container{
-    width: 60%;
-    position: relative;
+.image-container {
+  width: 60%;
+  position: relative;
+}
+
+.home-social-icons {
+  margin-top: -5rem;
+  width: min-content;
 }
