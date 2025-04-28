@@ -1,11 +1,7 @@
 {
   "hosting": {
-    "public": "dist/rohit-profile",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "public": "dist/rohit-profile/browser",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
